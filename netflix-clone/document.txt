@@ -1,0 +1,59 @@
+
+#STEP 1: API KEY
+themoviedb
+www.themoviedb.org/settings/api
+https://api.themoviedb.org/3/movie/550?api_key=<API_KEY>
+
+#STEP 2: Create a React App
+npx create-react-app netflix-clone
+
+#STEP 3: Firebase Hosting Setup
+Add Firebase to your web app: https://console.firebase.google.com/
+							  	
+
+npm install -g firebase-tools
+
+#STEP 4: Get All the Movies
+			Build the Rows	
+
+npm i axios	
+rfce ES-7
+
+#STEP 5: Fetching the DATA (using React Hooks)
+ 
+Extension from vcode:  
+prettier->settings->format->checkbox Format on save.
+
+#STEP 6: Creating the Rows (using CSS FlexBox)
+ 
+shortcut: 
+div.banner__button 
+
+#STEP 7: Build the Banner 
+
+#STEP 8: Creating the NAVBAR
+
+#STEP 9: Creating Trailer Pop-ups
+npm i react-youtube
+npm i movie-trailer
+
+#STEP 10: Deploying to Firebase
+
+firebase login
+firebase init
+	Hosting
+	Use an existing project
+	build 
+npm run build
+firebase deploy
+
+https://netflix-clone-6ea6e.web.app/
+
+
+
+	
+
+
+
+
+

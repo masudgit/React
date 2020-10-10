@@ -1,0 +1,146 @@
+#
+npm install yarn -g
+yarn install
+
+node -v  //v12.16.3
+yarn -v //1.16.0
+
+#
+npx create-react-app my-contact-app
+cd my-contact-app
+yarn start //This will start a development server and open up a web browser.
+
+#Node Modules: we use an import statement to access the code from that module.
+
+#Public Folder: 
+This is where our bundled code goes. When we are ready to deploy our app, we run a ** build script**and the final files go in here. This will typically be our HTML, JavaScript, and CSS files. This is the folder we dump onto a web server somewhere, so that we can let users see our app via a URL
+
+#Index.html
+The index.html is the entry point, or the first thing the web browser loads when a user navigates to the URL hosting our app.
+
+#Component:
+~That’s more or less what a “component” is — a function with some logic and markup. We’re also going to export this function so we can use it elsewhere:
+~Within our function we want to write return(). This is what get’s returned from this component, and contains our markup which gets converted and rendered as HTML.
+~a component in React is just a function that returns some JSX.
+~Whenever the components state changes, React will re-render the component with the new state
+
+#Our First Component:
+App.js from the project tree. This is the Main component in our application. This is the first component to get rendered. 
+import React from "react"; //React library into scope and gives us access to all the lovely features
+
+#JSX (JavaScript XML). 
+This basically allows us to mix JavaScript and HTML together.
+This is JSX! Even though it looks like normal HTML, what’s happening behind the scenes is that React is creating the element tree, using this syntax:
+React.createElement(component, props, ...children)	
+	
+component: The HTML element you wish to created, i.e. h1, div etc
+props: any props you wish to pass to that component.
+children: An array of HTML elements that are nested within this element
+
+e.g:
+ const App = () => {
+  const  message  = "This is my first variable rendered in JSX!";
+  return (
+    
+    /*React.createElement(
+      "div",
+      null,
+      React.createElement("h1",null,"Hello React world!"),
+      React.createElement("h2",null,"This is our first React app - isn't it marvellous?!")
+    )*/
+
+   <div>
+      <h1>Hello React world!</h1>
+      <h2>{message}</h2>
+    </div> 
+    
+  );
+ }
+
+~We use curly braces to tell the compiler “execute this code as JavaScript”. If we didn’t have curly braces, the message variable wouldn't get executed as JavaScript.
+~we use a arrow function here to create a nice, concise inline function.
+~Arrow Functions:
+ = () => 
+ 
+~index.js:  This is the first file to run (we often call this an “Entry Point”). This is typically by convention — we can change the entry point if we want.
+~index.html:  This index.html file is the first HTML file to get loaded when the website loads. Within it we have a div with an ID of root, which is empty. This is where React loads our components. Let’s have a look at this in the dev tools. (HTML rendered from our App component. )
+
+#Handling Events:
+When using JSX, React gives us access to event listeners that already be familiar with: onClick, onPress, onSubmit and so on. 
+
+#Quick Summary:
+	*We have an index.html file, which is the skeleton of our web app
+	*When the app starts, index.html loads, and imports our App Component
+	*The JSX in the App component get’s converted to HTML, which is then rendered in the index.html file at the root div 
+
+#NOTE: to reference CSS classes, we need to use the className keyword. This is because we are writing JSX, and “class” is a reserved word in JavaScript.
+
+#useState Hook:
+[The useState hook lets us store state in a functional component]
+~State is basically an object that represents a part of an app that can change, which the UI “reacts” to. State can be anything; objects, booleans, arrays, strings or integers. 
+~The useState object gives us a variable with the current value, and a function that lets us change that value. When we call useState we can define an initialvalue (in this case, false)
+  e.g: const [showAge, setShowAge] = useState(false);
+~State belongs to the individual component. In other words, each ContactCard component that renders is a copy, and has its own state/data.
+
+#Readability should come first.
+
+#Updating State: the useState() hook gives us a function to update the state.
+  e.g: <button onClick={() => setShowAge(!showAge)}>Toggle Age </button>
+
+#Props:
+Props as data that gets passed to a component, which the component can then use. 
+NOTE: Props must be defined using quoted text (e.g. name=“Jenny Han”) or within braces (e.g. age={25}. If we leave out the braces for anything other than strings things start to break — age=25 );
+
+#useEffect Hook:
+The useEffect hook is a special hook that runs a function. By default, the useEffect hook runs on every re-render. However, we can configure it to only run under certain condition, e.g. when a component mounts, or if a variable changes. The useEffect hook looks like this:
+	useEffect(() => {
+		// code to run 
+	});
+This will run every time. If we want to specify “only run once” we pass in an empty array as a second argument like so.
+
+	useEffect(() => {
+		// code to run 
+	},[]); //<-- notice the empty array
+This is called a dependency array. When the dependency array is empty, this means the useEffect function will only run when the component loads for the first time. For additional re-renders, the useEffect function is skipped.
+
+Note:
+The useEffect hook is a React hook that lets us run code at different parts of the lifecycle of a component.
+The useEffect hook is where you typically do API calls, update your component if the props change, and run any clean-up code.
+You can solve a lot of problems nicely with the useEffect and useState hooks, so make sure to have them in your arsenal of React knowledge!
+
+#Props vs State:
+Props are data that gets passed to your components from their parent. This data can be anything - numbers, strings, objects, arrays, functions, etc.
+	e.g:
+		const App = () => {
+			return <UserDetails name='chris' age={25} />;
+		};
+
+State is data that can represent parts of an app that can change. 
+	e.g:
+		const App = () => {
+		const [isModalOpen, setIsModalOpen] = useState(false);
+		const [inputValue, setInputValue] = useState("hello React");
+		const [userList, setUserList] =useState([
+			{name: "chris", age: 28},
+			{name: "jenny", age: 20},
+			{name: "alfred", age: 32}
+		])
+
+		return(
+			// ...JSX
+		)
+	}
+#Ignore the server - use fake data or existing API’s:
+Here’s a list of API’s you can play with: https://github.com/public-apis/public-apis
+JSONPlaceholder is another cool tool to quickly get an API going: https://jsonplaceholder.typicode.com/
+
+#Life cycle and how a component rerenders:
+It’s important to know the React life cycle and how/when a component re-renders. I’ve wasted many hours bug-fixing by not fully understanding this stuff! Here are some tips to get you started with this:
+
+	When a components state changes, React will re-render the component
+	When a component rerenders, it will automatically re-render its children
+	Use useEffect() to run code at certain parts of the lifecycle
+
+
+Reference: 
+https://jschris.com/fast-track-your-learning-with-these-12-tips
