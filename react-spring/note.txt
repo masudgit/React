@@ -1,0 +1,66 @@
+Links:
+	https://jestjs.io/
+	spring.io/
+	code.visualstudio.com/docs/java/java-spring-boot
+	https://brew.sh
+	getpostman.com 
+
+
+	React and Spring:
+
+	brew install maven 
+	
+
+Step1:
+	spring.io -> projects ->Spring Initializr ->
+							com.crm;jar;->Depedencies(rest repositoris+jpa+h2+lombok+
+		
+	vscode->extensions->Java Extension Pack->install 
+    define java home in vscode: settings->settings-> find java.home-> edit in json file ("java.home": "D:\\Java\\jdk1.8.0_144")
+    
+
+Step2:
+  npx create-react-app crm-client	
+  
+Step3:
+  spring.io/projects/spring-data
+  spring.io/guides
+  
+Step4:
+ Define model class
+ JPA repository 
+ Define example data
+ Finalize base server
+	POST endpoint
+	GET endpoint
+	GET ID endpoint
+	PUT endpoint
+	
+ e.g:
+	GET:
+	http://localhost:8080/api
+	http://localhost:8080/api/contacts
+	http://localhost:8080/api/contacts/2
+	
+	POST and PUT: 
+		http://localhost:8080/api/contacts
+		Headers: Key(Content-type): Value(application/json)
+		Body: raw
+			{
+			 "firstName": "Mariyum",
+			 "lastName": "Binte",
+			 "email": "masud.ikbal@gmail.com"
+			}
+	DELETE:
+		http://localhost:8080/api/contacts/4
+		
+Step5: Basic Fronend with React 
+	Create contact listing component
+	Add materialize to the project 
+		https://materializecss.com
+			Getting started->CDN Copy->react project/public/index.html(link in head+script in body)
+			Components->icons->CDN Copy->
+			Update Add.js 
+	Finalize list of contacts component
+	Create and structure your components 
+		https://materializecss.com->Components->Cards->	
