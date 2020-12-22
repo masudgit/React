@@ -13,7 +13,6 @@ function App() {
            <Contacts />
          </div>
        </nav>
-       <Contacts />
     </div>
   );
 }

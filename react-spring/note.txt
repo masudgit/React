@@ -10,6 +10,7 @@ Links:
 
 	brew install maven 
 	
+	mvn spring-boot:run
 
 Step1:
 	spring.io -> projects ->Spring Initializr ->
