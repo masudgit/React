@@ -1,0 +1,60 @@
+#Create a React Starter APP
+npx create-react-app react-shopping-cart
+
+#Start project:
+ cd react-shopping-cart
+ yarn start/npm start
+ yarn build/npm run build 
+ 
+# Remove un-used files:
+logo.svg
+setupTests.js
+serviceWorker.js
+App.test.js
+App.css
+ 
+#Project Development Workflow
+~Create github repository:
+https://github.com/masudgit
+click on new repository: react-shopping-cart
+create repository
+Follow this steps:
+    …or push an existing repository from the command line
+    i)git remote add origin https://github.com/masudgit/react-shopping-cart.git
+    ii)git branch -M main
+    iii)git push -u origin main
+
+cmd: 
+>git config --list
+>git config --global user.name "masudgit"
+>git config --global user.email masud.cseu@gmail.com
+
+Open VScode and point the newly created folder: react-shopping-cart
+Click the + button
+Now add a top repository as a remote repository for my current project. by command i)
+Now Commit: First Commit and hit enter
+Synchronizing changes/Publish changes
+
+~Click master at the bottom left. [note: master is the main branch]
++ Create new branch [We are going to create a new branch as for each branch we want to implement an individual feature] e.g: feature-1
+make some changes 
+Commit and publish to the new branch.
+Go at : https://github.com/masudgit/react-shopping-cart
+It will ask - Compare & pull request [Asking to compare and manage this changes with the master branch]
+Click on Compare & pull request
+Click on Create pull request 
+Click on Merge pull request and then Confirm merge.
+
+Go at https://github.com/masudgit/react-shopping-cart and see the msg: Merge pull request #1 from masudgit/feature-1
+Click on Pull requests, click on feature-1.
+You have the capability of comparing your changes to the master.
+Click on Files changed. 
+So large features you will know exactly a step by step, which part of code has been change added or deleted.
+
+Click master at the bottom left. and move to the master branch.
+We know there are two changes that need to be fetched from server. 
+Click on Synchronizing changes, it's pooling fetching data from github and updating your main branch, the master branch.
+
+This is the whole process of creating a feature in Google's spreadsheet make it done, creating a branch in VSCode, publish this branch, pull request and merge that branch into the master, and then come back again to VSCode, switch to master and then synchronize your latest change inside the branch.
+
+ 
