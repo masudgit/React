@@ -1,0 +1,12 @@
+1. box-sizing: border-box; 
+   ~Defines how the width and height of an element are calculated: should they include padding and 
+   borders, or not.
+   ~The CSS box-sizing property allows us to include the padding and border in an element's total 
+   width and height.     
+
+2. 1 rem = 10px
+3. color: #ffffff ; hexadecimal color code system.
+4. To use flex, we need to create a row class.
+        display: flex;
+5. To make responsive: 
+        flex-wrap: wrap;
