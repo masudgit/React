@@ -62,4 +62,5 @@ Click on Synchronizing changes, it's pooling fetching data from github and updat
 This is the whole process of creating a feature in Google's spreadsheet make it done, creating a branch in VSCode, publish this branch, pull request and merge that branch into the master, and then come back again to VSCode, switch to master and then synchronize your latest change inside the branch.
 
 #Product Component:
+ctrl + p : to find a file in project.
 
