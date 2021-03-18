@@ -64,3 +64,10 @@ This is the whole process of creating a feature in Google's spreadsheet make it 
 #Product Component:
 ctrl + p : to find a file in project.
 
+#Convert JS Object to String: JSON.stringify(object)
+#Convert String to JS Object: JSON.parse(string)
+
+#e.preventDefaults():
+event object is raised by the form.
+not going to refresh the page when user click on submit button
+
