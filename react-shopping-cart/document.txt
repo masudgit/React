@@ -71,3 +71,13 @@ ctrl + p : to find a file in project.
 event object is raised by the form.
 not going to refresh the page when user click on submit button
 
+#Backend: 
+yarn add express body-parser mongoose shortid
+express: as a webserver
+body-parser: to parse data inside a post request to the server
+mongoose: it connects us to the mondodb database
+shortid: is a library, to create user friendly id, saved as a product.
+
+#Install Software:
+https://www.mongodb.com/try/download/community
+
