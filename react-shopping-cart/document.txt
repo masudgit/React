@@ -81,3 +81,6 @@ shortid: is a library, to create user friendly id, saved as a product.
 #Install Software:
 https://www.mongodb.com/try/download/community
 
+#Redux:
+reducers: has two i)current state ii)action types
+
