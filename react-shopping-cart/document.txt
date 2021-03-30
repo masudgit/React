@@ -81,3 +81,20 @@ shortid: is a library, to create user friendly id, saved as a product.
 #Install Software:
 https://www.mongodb.com/try/download/community
 
+#Redux:
+reducers: has two i)current state ii)action types
+store: first parameter reducer, second parameter initialStore, third parameter middlewares(e.g: redux-thunk) 
+compose: to compose all middlewares together, 
+middlewares:
+ i)redux-thunk
+ ii)redux dev tools for chrome.
+ 
+#connect: accept two parameters. i)function which accept state, and return an object , that define 
+which part of redux state, we are going to use. ii)list of actions.
+connect function itself retuan another function, the another function accept parameters and the parameter 
+is the name of component we are going to use. 
+
+#Browser Extentions:
+React Dev Tools
+Redux Dev Tools
+
