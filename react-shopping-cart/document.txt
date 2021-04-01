@@ -89,12 +89,33 @@ middlewares:
  i)redux-thunk
  ii)redux dev tools for chrome.
  
-#connect: accept two parameters. i)function which accept state, and return an object , that define 
-which part of redux state, we are going to use. ii)list of actions.
-connect function itself retuan another function, the another function accept parameters and the parameter 
-is the name of component we are going to use. 
+#connect: accept two parameters. 
+i)function which accept state, and return an object , that define which part of redux state, we are going to use. 
+ii)list of actions. 
+connect function itself retuan another function, the another function accept parameters and the parameter is 
+the name of component we are going to use. 
+OR
+i) map state to props 
+ii)mapping actions
+And for the connect function, we need to define a component that is gonna be wrapped inside the redux store. 
 
 #Browser Extentions:
 React Dev Tools
 Redux Dev Tools
 
+#Action:
+~As we are using react-thunk, we need to return another function, this function has dispatch parameter, 
+inside this function, we need to dispatch an action that change  the redux store. 
+~An action is an object. There are two values for each action i)Action type ii)payload (an object)
+ e.g: export const filterProducts = (products, size) => (dispatch) =>
+
+#Reducers:
+return object:
+ i) current state denoted by ...state 
+ ii)But if I change a value inside this state, it gonna be merged with current state.
+case FILTER_PRODUCTS_BY_SIZE:
+    return {
+        ...state,
+
+    }
+ #   
