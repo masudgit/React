@@ -103,7 +103,7 @@ And for the connect function, we need to define a component that is gonna be wra
 React Dev Tools
 Redux Dev Tools
 
-#Action:
+#Action: (dispatch action to the reducers)
 ~As we are using react-thunk, we need to return another function, this function has dispatch parameter, 
 inside this function, we need to dispatch an action that change  the redux store. 
 ~An action is an object. There are two values for each action i)Action type ii)payload (an object)
@@ -118,6 +118,9 @@ case FILTER_PRODUCTS_BY_SIZE:
         ...state,
 
     }
- #Functional Component: There has no lifecycle methods.
-    
+#Functional Component: There has no lifecycle methods.
+
+#Model: (Mongoose Schema)
+timestamps: true: automatically two fields will be created i)CREATED_AT ii)UPDATED_AT 
+
 
