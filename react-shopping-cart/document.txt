@@ -118,4 +118,6 @@ case FILTER_PRODUCTS_BY_SIZE:
         ...state,
 
     }
- #   
+ #Functional Component: There has no lifecycle methods.
+    
+
