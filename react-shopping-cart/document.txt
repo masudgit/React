@@ -97,7 +97,7 @@ the name of component we are going to use.
 OR
 i) map state to props 
 ii)mapping actions
-And for the connect function, we need to define a component that is gonna be wrapped inside redux 
+And for the connect function, we need to define a component that is gonna be wrapped inside the redux store. 
 
 #Browser Extentions:
 React Dev Tools
