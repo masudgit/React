@@ -122,5 +122,6 @@ case FILTER_PRODUCTS_BY_SIZE:
 
 #Model: (Mongoose Schema)
 timestamps: true: automatically two fields will be created i)CREATED_AT ii)UPDATED_AT 
-
+#Actions:
+Thunk based actions, we need to pass dispatch as a parameter
 
