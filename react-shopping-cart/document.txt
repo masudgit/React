@@ -125,3 +125,6 @@ timestamps: true: automatically two fields will be created i)CREATED_AT ii)UPDAT
 #Actions:
 Thunk based actions, we need to pass dispatch as a parameter
 
+#React Router:
+React Router DOM is a React Router library.
+ 
