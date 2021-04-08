@@ -83,6 +83,5 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
-react-shopping-cart/yarn.lock
-react-shopping-cart/package-lock.json
+yarn.lock
 package-lock.json

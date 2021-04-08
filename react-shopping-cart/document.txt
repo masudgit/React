@@ -127,4 +127,13 @@ Thunk based actions, we need to pass dispatch as a parameter
 
 #React Router:
 React Router DOM is a React Router library.
+
+#deploy heroku:
+i) To render static files inside build folder:
+    app.use("/", express.static(__dirname + "/build"));
+ii) https://www.mongodb.com/cloud
+iii)heroku.com
+
+Procfile: is the file that heroku check that when it wants to start your server. 
+
  
