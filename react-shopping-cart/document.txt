@@ -129,10 +129,16 @@ Thunk based actions, we need to pass dispatch as a parameter
 React Router DOM is a React Router library.
 
 #deploy heroku:
-i) To render static files inside build folder:
+There are three steps to publish on Heroku:
+ 1) Run production version of website on locally
+ 2) Create a cloud mongodb database on cloud.mongodb.com
+ 3) Creating an application on Heroku and publish our works there.
+
+~ 
+. To render static files inside build folder:
     app.use("/", express.static(__dirname + "/build"));
-ii) https://www.mongodb.com/cloud
-iii)heroku.com
+. https://www.mongodb.com/cloud
+. heroku.com
 
 Procfile: is the file that heroku check that when it wants to start your server. 
 heroku git:remote -a yourapp
