@@ -134,13 +134,32 @@ There are three steps to publish on Heroku:
  2) Create a cloud mongodb database on cloud.mongodb.com
  3) Creating an application on Heroku and publish our works there.
 
-~ 
-. To render static files inside build folder:
-    app.use("/", express.static(__dirname + "/build"));
-. https://www.mongodb.com/cloud
-. heroku.com
+steps:
+i)   branch deploy-heroku
+ii)  yarn build
+iii) update server.js, to render static files inside build folder
+iv) yarn server 
+v)  https://cloud.mongodb.com
+    click on collections, create database , collections, save 
+    navigate to Network Access, click ADD IP ADDRESS, IP: 0.0.0.0/0 , Comments: ALL , save 
+    navigate to Database Access, click ADD NEW DATABASE USER, create a username, password, copy
+    naviate to Clusters, click on CONNECT, Connect your Application, copy:
+    mongodb+srv://react-shopping-cart:<password>@cluster0.ammb5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+vi) go at heroku.com and login 
+    close all terminal and open a new terminal
+    run in the terminal in master branch: heroku login
+    heroku apps:create react-shopping-cart-ikbal
+    edit package.json and add "engines": { "node": "14.15.3", "npm": "6.9.0"}
+    Procfile: is the file that heroku check that when it wants to start your server. 
+    Set MongoDB connection string in Heroku:
+     -> update server.js and include process.env.MONGODB_URL || 
+     -> Add key NODE_MODULES_CACHE and value false; By setting this, we run or rebuild the project, all modules will be 
+     downloaded again.
+vii)git push heroku
+This will publish and produce url: https://react-shopping-cart-ikbal.herokuapp.com
 
-Procfile: is the file that heroku check that when it wants to start your server. 
-heroku git:remote -a yourapp
-git rm yarn.lock
-git push heroku
+viii)data load into api:
+Go at postman:
+POST https://react-shopping-cart-ikbal.herokuapp.com/api/products
+Hearders: Content-Type: application/json 
+Body: raw, JSON, object like data.json 
