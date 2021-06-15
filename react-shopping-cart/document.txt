@@ -155,6 +155,10 @@ vi) go at heroku.com and login
      -> update server.js and include process.env.MONGODB_URL || 
      -> Add key NODE_MODULES_CACHE and value false; By setting this, we run or rebuild the project, all modules will be 
      downloaded again.
+	 -> Select App ->Settings ->Config Vars->Key Value
+		MONGODB_URL = value
+		NODE_MODULES_CACHE = false
+
 vii)git push heroku
 This will publish and produce url: https://react-shopping-cart-ikbal.herokuapp.com
 
