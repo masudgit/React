@@ -1,0 +1,110 @@
+====================================================================SSR========================================================================
+ Application is running on the server instead of the client.
+ 
+#Regular React client-side application vs SSR:
+~ Your backend provides APIs or data to your front-end-side client, then React with the data on hand renders the HTML of your application in the browser.
+
+~ Whereas in server-side rendering, the server renders the HTML and then sends it to the client, eliminating the need of the client to do these tasks.
+
+#Advantages:
+->performance improvement in terms of the response time of your application.
+->by rendering the application in the server, we control the performance of the render.
+-> SSR allows you to scale your application without always worrying about its performance. If your application needs more power, all you have to do is rent or purchase the hardware to support it. 
+
+i. Consider this fact, the browser in which your application renders is impacted by the machine it runs on. Therefore, if people are looking at your application on older hardware, such as an old phone, laptop or desktop, they will see a difference in performance to those running newer hardware. However, by rendering the application in the server, you control the performance of the render.
+
+ii. Additionally, if you're concerned if your site or applications gets found in the top results of Google, Bing, and other search engine searches, that might be the second benefit of rendering an application on the server. 
+JavaScript doesn't play well with search engines. And unfortunately, when Google for instance sends its robots to index your page, all it sees is JavaScript and not HTML. Over the past few years the situation has improved a bit, but you are better positioned to be indexed properly if what the robot sees is HTML. 
+
+#Benfefits of SSR(Server-Side Rendering):
+i.  Faster Load times 
+ii. Improved SEO
+
+######
+#google chrome, react dev tools 
+
+============================================================Use Next.js to Build SSR==================================================================
+#Next.js:
+~it uses Webpack, this is what builds your application into a bundle to be used in the server.
+~Next.js expects components inside of pages.
+~Webpack, which is the tool used behind the scene by Next.js. 
+
+npx create-next-app ssrapp_npx
+
+mkdir ssrapp
+npm init
+npm i react react-dom next
+npm run build
+npm start
+npm run dev //it will build the app and start the app
+
+~data from external api: https://github.com/vercel/next.js/ examples 
+
+#Redux:
+it basically makes the management of your state centralized, but also prevents spreading your state through all your child components.
+
+ npm i next-redux-wrapper react-redux redux 
+
+#Redux Action:
+~dispatch is a function, that basically calls into the store and goes into one of the action.
+~actions are the functions that will be dispatched or called by the component and then execute the reducers to update the store.
+
+#Redux Reducers:
+The function that will take the action dispatch by the application and then update the store with the new information. And therefore the applicaiton will be able to update its views with the updated data. 
+
+ case 'ADD':
+      return {
+            ...state, //current state
+            cards: [...state.cards, action.item], //current state, a new payload which is item
+      } 
+we're returning the original state that we had when we first clicked on add or click on the action. And then we're returning the current state and then we're adding to it the new action item that was passed.  
+ 
+#Why Redux?
+1. Centralized state management 
+2. Battle tested with React 
+
+So the combination of React, SSR with Next Js, and Redux is great for managing your performance and state of large applicaiton.
+
+=========================================================Server-Side Rendering with Node==============================================================
+npm i express
+
+Why use Node or Express for SSR?
+A: 
+  1. Routes, HTTP , and other benefits 
+	 Http helpers such as caching, etc.
+  2. Express, Next.js, React = Great tool set [SSR capabilities on top]
+  
+========================================================Code Splitting==============================================================
+code splitting is built in next.js.
+code splitting is the ability to split code in smaller bundles, so the application can load faster when rendered. Its all about speed.
+
+ A.js		->
+ A.css       	-> "A" Bundle
+ A imports  ->
+
+[https://nextjs.org/docs/advanced-features]
+. Dynamic imports - is great way to lazy loads the components. 
+. Dynamic React components 
+. APM support 
+
+.webpack
+.browserify
+
+#Purpose of Code Splitting:
+1. Need performance improvement
+2. Splits your rendered code into components
+
+~It splits your code into various bundles and components to be loaded as needed, preventing your application from loading as one big chunk of code. This way, let's say you only need a specific section of the application loaded, only this section and not the entire list of components is rendered. 
+
+#Sumamry:
+github node.js examples 
+
+Community:
+ Stack Overflow, GitHub repositories, and docs 
+ 
+ 
+ 
+  
+  
+ 
+
