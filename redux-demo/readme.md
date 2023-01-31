@@ -46,6 +46,29 @@ The 'type' property is typically defined as string constants.
 ~An action is an object with a type property
 ~An action creator is a function that return an action.
 
+#Reducers:
+Specify how the app's state changes in reponse to actions sent to the store.
+Function that accepts state and action as arguments, and returns the next state of the application.
+(previousState, action) => newState
+
+const initialState = {
+    numOfCakes: 10
+}
+const reducer = (state = initialState, action) => {
+    switch(action.type) {
+        //we are asking reducer, to first make a copy of the state object and then 
+        //only update the numOfCakes. If there are other property, they will remain unchange.
+        case BUY_CAKE: return {
+            ...state,
+            numOfCakes: state.numOfCakes - 1;
+        }
+        default: return state
+    }
+}
+Note: 
+~In real app, the state object could have a lot of property. That's why it is always safer to first create a copy the state object and then change only the properties that need to. 
+~To make a copy of the state object, we use the spread operator(...state) 
+
 #
 
 
