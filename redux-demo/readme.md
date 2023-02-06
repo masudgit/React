@@ -46,7 +46,9 @@ The 'type' property is typically defined as string constants.
 ~An action is an object with a type property
 ~An action creator is a function that return an action.
 
-#Reducers:
+#Reducers: [Update the state based on the action] 
+           [Reducer function which controls how the state transition happen]
+
 Specify how the app's state changes in reponse to actions sent to the store.
 Function that accepts state and action as arguments, and returns the next state of the application.
 (previousState, action) => newState
@@ -69,6 +71,28 @@ Note:
 ~In real app, the state object could have a lot of property. That's why it is always safer to first create a copy the state object and then change only the properties that need to. 
 ~To make a copy of the state object, we use the spread operator(...state) 
 
-#
+#Redux Store(State): [Which brings the action and reducer together]
+One store for the entire application.
+Responsibilites:
+ 1. Holds application state: 
+    reducer has the initial state of the applicaiton. This is require for the store to make the state transition based on the action received.
+ 2. Allows access to state via getState() : which gives the current state of the application. 
+ 3. Allows state to be updated via dispatch(action)
+ 4. Registers listeners via subscribe(listener)
+ 5. Handles unregistering of listeners via the function returned by subscribe(listener)
+
+ node index.js
+
+#Cakes and Ice Creams - Sce:
+The reason of having seperate shopkeeper(reducer) is scalability.
+
+If you maintain one reducer, it will be difficult to debug , manage, and keep track of. 
+
+#CombineReducers: To combine multiple reducers into a single reducer which then can be pass to the createStore method.
+
+
+ #Links:
+ testgorilla.com/react/
+
 
 
