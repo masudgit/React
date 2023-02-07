@@ -90,9 +90,19 @@ If you maintain one reducer, it will be difficult to debug , manage, and keep tr
 
 #CombineReducers: To combine multiple reducers into a single reducer which then can be pass to the createStore method.
 
+###Middleware: [For logging, crash reporting, performing asynchronous tasks etc]
+Is the suggested way to extend Redux with custom functionality.
+Provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.
 
- #Links:
- testgorilla.com/react/
+  middleware:  https://www.npmjs.com/package/redux-logger
+
+##
+
+
+
+
+#Links:
+testgorilla.com/react/
 
 
 
