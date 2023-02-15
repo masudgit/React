@@ -135,9 +135,10 @@ Asynchronous API calls to fetch data from an end point and use that data in your
 #Async action creators:
 ~How to use action creators with network requests.
 ~How to make an API call when working with redux.
-a. axios: Requests to an API endpoint 
+a. axios: 
+    Requests to an API endpoint 
 b. redux-thunk:  
-    Define async action creators
+    It will allow to define async action creators in the application.
     Middleware (we will apply to our redux store)
 
 yarn add axios redux-thunk
