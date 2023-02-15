@@ -33,4 +33,16 @@ b) useDispatch Hook:
 dispatch an action.
 This hook returns a reference to dispatch function from the redux store. 
 
+====Logger Middleware=====
+yarn add redux-logger
 
+The middleware basically logs information related to the redux store. 
+To view the logs, need to open the logs.
+
+====Redux Devtool Extension====
+google -> redux dev tools
+          redux dev tools -> github link  
+
+github link:
+#1.3 Use redux-devtools-extension package from npm
+npm install --save redux-devtools-extension
