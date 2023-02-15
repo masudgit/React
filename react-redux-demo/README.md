@@ -46,3 +46,19 @@ google -> redux dev tools
 github link:
 #1.3 Use redux-devtools-extension package from npm
 npm install --save redux-devtools-extension
+
+
+======mapStateToProps
+first parameter: state
+second parameter: props that has been passed to the component from the parent component.
+
+common use-case: 
+    master detail pattern. From a list of items, when we click on a particular item, we pass item id as props and then fetch the data only for that id from redux. 
+
+=======mapDispatchToProps
+
+=======connect -> for the subscription
+    export default connect(null, mapDispatchToProps)(ItemContainer) //if mapStateToProps is not necessary
+    export default connect(mapStateToProps)(ItemContainer) //if mapDispatchToProps is not necessary
+
+
