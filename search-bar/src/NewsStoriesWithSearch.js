@@ -11,13 +11,12 @@ const NewsStoriesWithSearch = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [keyword, setKeyword] = useState(''); 
-  const url = "https://hn.algolia.com/api/v1/search_by_date?tags=front_page&hitsPerPage=20"; 
+  const url = "http://localhost:3000/"; 
 
   const fetchStories = async () => {
     try {
-        //const data = await (await axios.get(url)).json();
-        const data = await (await fetch('https://hn.algolia.com/api/v1/search_by_date?tags=front_page&hitsPerPage=20')).json();
-        const storedStories = data.hits;
+        const response = await axios.get(`${url}story`);
+        const storedStories = response.data;
         setAllStories(storedStories);
         setStories(storedStories);
         setError(null)
